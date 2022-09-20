@@ -1,0 +1,23 @@
+public class Solution {
+    public int[] solve(int[] A) {
+           ArrayList<Integer> arr=new ArrayList<>();
+        int count=0;
+        for(int i:A){
+            if(i==0){
+                count++;
+            }
+            else{
+                arr.add(i);
+            }
+        }
+        for(int j=0;j<count;j++){
+            arr.add(0);
+        }
+        int[] b=new int[arr.size()];
+        for(int an=0;an<arr.size();an++){
+            b[an]=arr.get(an);
+            
+        }
+        return b;
+    }
+}
