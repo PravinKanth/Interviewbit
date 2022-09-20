@@ -1,0 +1,16 @@
+public class Solution {
+    public int solve(int[] A) {
+        int max=0;
+        int min=A[0];
+        for(int i:A){
+            if(i>max){
+                max=i;
+            }
+            if(i<min){
+                min=i;
+            }
+            
+        }
+        return min+max;
+    }
+}
