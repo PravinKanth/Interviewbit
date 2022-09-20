@@ -1,0 +1,14 @@
+public class Solution {
+    public int[] solve(int[] A) {
+        ArrayList<Integer> arr=new ArrayList<>();
+        for(int i:A){
+            arr.add(i);
+        }
+        int[] ab=new int[arr.size()];
+        Collections.sort(arr);
+        for(int u=0;u<arr.size();u++){
+            ab[u]=arr.get(u);
+        }
+        return ab;
+    }
+}
