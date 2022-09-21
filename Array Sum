@@ -1,0 +1,26 @@
+import java.math.*;
+public class Solution {
+    public ArrayList<Integer> addArrays(ArrayList<Integer> A, ArrayList<Integer> B) {
+        StringBuilder s1 = new StringBuilder();
+        StringBuilder s2 = new StringBuilder();
+        for(int i: A){
+            s1.append(String.valueOf(i));
+        }
+        for(int i: B){
+            s2.append(String.valueOf(i));
+        }
+        String num1= s1.toString();
+        String num2 = s2.toString();
+        BigInteger n1 = new BigInteger(num1);
+        BigInteger n2 = new BigInteger(num2);
+        BigInteger sum = n2.add(n1);
+        
+        ArrayList<Integer> lst = new ArrayList<>();
+        
+        String s[] = sum.toString().split("");
+        
+        for(String str:s) lst.add(Integer.parseInt(str));
+        return lst;        
+        
+    }
+}
