@@ -1,0 +1,21 @@
+public class Solution {
+    public int solve(ArrayList<Integer> A, ArrayList<Integer> B, int C) {
+        int first=0;
+        int second=0;
+        for(int i:A){
+            if(i>C){
+                first++;
+            }
+        }
+        
+         for(int j:B){
+            if(j<C){
+                second++;
+            }
+        }
+        if(first>second){
+            return first;
+        }
+        return second;
+    }
+}
