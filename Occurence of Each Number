@@ -1,0 +1,16 @@
+class Solution:
+    # @param A : list of integers
+    # @return a list of integers
+    def findOccurences(self, A):
+        b=[]
+        c={}
+        for i in A:
+            if i in c:
+                c[i]+=1
+            else:
+                c[i]=1
+                b.append(i)
+        d=sorted(b)        
+        for j in range(len(d)):
+            b[j]=c[d[j]]
+        return b     
