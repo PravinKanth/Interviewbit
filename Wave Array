@@ -1,0 +1,15 @@
+class Solution:
+	# @param A : list of integers
+	# @return a list of integers
+	def wave(self, A):
+        b=sorted(A)
+        c=b[-1]
+        if(len(A)%2!=0):
+            b=b[0:len(b)-1]
+        for i in range(0,len(b),2):
+            dum=b[i]
+            b[i]=b[i+1]
+            b[i+1]=dum
+        if(len(A)%2!=0):
+            b.append(c)
+        return b  
