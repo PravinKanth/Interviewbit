@@ -1,0 +1,16 @@
+class Solution:
+    def hotel(self, arrive, depart, K):
+        a=[]
+        for i in range(len(arrive)):
+            a.append((arrive[i],0))
+            a.append((depart[i],1))
+        a=sorted(a)
+        max=0
+        for j in a:
+            if j[1]==0:
+                max+=1
+            else:
+                max-=1
+            if max>K:
+                return 0
+        return 1                
