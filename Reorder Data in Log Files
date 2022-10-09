@@ -1,0 +1,19 @@
+class Solution:
+    # @param A : list of strings
+    # @return a list of strings
+    def reorderLogs(self, logs):
+        words = []
+        nums = []
+        xt=[]
+        for i in range(len(logs)):
+            if logs[i].split("-")[1].isdigit():
+                nums.append(logs[i])
+            else:
+                words.append((logs[i].split("-")[1:],logs[i].split("-")[0]))
+        words.sort()
+
+        for j in words:
+            b=j[0].insert(0,j[1])
+            xt.append("-".join(j[0]))
+        xt.extend(nums)    
+        return xt
