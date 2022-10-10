@@ -1,0 +1,33 @@
+public class Solution {
+    public int evalRPN(ArrayList<String> A) {
+        ArrayList<String> op=new ArrayList<>();
+        Stack<String> s=new Stack<String>();
+        op.add("*");
+        op.add("+");
+        op.add("-");
+        op.add("/");
+        for(String i:A){
+
+            if(op.contains(i)){
+                int a=Integer.parseInt(s.pop());
+                int b=Integer.parseInt(s.pop());
+                if(i.equals("+")){
+                    s.push(String.valueOf(a+b));
+                }
+                if(i.equals("-")){
+                    s.push(String.valueOf(b-a));
+                }
+                if(i.equals("/")){
+                    s.push(String.valueOf(b/a));
+                }
+                if(i.equals("*")){
+                    s.push(String.valueOf(a*b));
+                }
+            }
+            else{
+                s.push(i);
+            }
+        }
+        return Integer.parseInt(s.peek());
+    }
+}
