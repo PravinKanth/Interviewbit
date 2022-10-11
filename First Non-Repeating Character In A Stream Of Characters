@@ -1,0 +1,21 @@
+class Solution:
+    def solve(self, A):
+        b="abcdefghijklmnopqrstuvwxyz"
+        queue=[]
+        c={}
+        ans=""
+        for i in b:
+            c[i]=True
+        for j in A:
+            if j not in queue:
+                if c[j]==True:
+                    queue.append(j)
+            else:
+                queue.remove(j)
+                c[j]=False
+            if len(queue)==0:
+                ans+="#"
+            else:
+                ans+=queue[0]
+                
+        return ans;
