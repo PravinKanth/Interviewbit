@@ -1,0 +1,29 @@
+public class Solution {
+    public String simplifyPath(String A) {
+        Stack<String> s=new Stack<>();
+        ArrayList<String> arr=new ArrayList<>(Arrays.asList(A.split("/+")));
+        arr.remove(0);
+
+        for(String a:arr){
+            if(a.equals("..")){
+                if(s.isEmpty()){
+                    continue;
+                }
+                s.pop();
+                continue;
+            }
+            if(!a.equals(".")){
+                s.push(a);
+            }
+        }
+        String ans="";
+        for(String p:s){
+            ans+="/"+p;
+        }
+        if(s.isEmpty()){
+            ans="/";
+        }
+
+        return ans;
+    }
+}
