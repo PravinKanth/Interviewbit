@@ -1,0 +1,13 @@
+class Solution:
+	def prevSmaller(self, A):
+        a=[]
+        b=[]
+        for i in range(len(A)):
+            while(len(b)!=0 and A[i]<=b[-1]):
+                b.pop()
+            if(len(b)==0):
+                a.append(-1)
+            else:
+                a.append(b[-1])
+            b.append(A[i])
+        return a                
