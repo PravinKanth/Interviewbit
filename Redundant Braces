@@ -1,0 +1,19 @@
+class Solution:
+	# @param A : string
+	# @return an integer
+	def braces(self, A):
+        stack=[]
+        for i in A:
+            if(i!=")"):
+                stack.append(i)
+            else:
+                top=stack[-1]
+                flag=True
+                while(top!="("):
+                    if(top=="+" or top=="*" or top=="-" or top=="/"):
+                        flag=False
+                    top=stack[-1]
+                    stack.pop()
+                if flag:
+                    return 1
+        return 0
