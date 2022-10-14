@@ -1,0 +1,18 @@
+public class Solution {
+    public int permuteStrings(String A, String B) {
+        ArrayList<String> ar=new ArrayList<>(Arrays.asList(A.split("")));
+        ArrayList<String> ar1=new ArrayList<>(Arrays.asList(B.split("")));
+        Collections.sort(ar);
+        Collections.sort(ar1);
+        boolean flag=true;
+        if(ar.size()==ar1.size()){
+            for(int i=0;i<ar.size();i++){
+                if(!ar.get(i).equals(ar1.get(i))){
+                    return 0;
+                }       
+            }
+        }
+        else return 0;
+       return 1;     
+    }
+}
