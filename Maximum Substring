@@ -1,0 +1,29 @@
+public class Solution {
+    public int solve(String A, int B) {
+        ArrayList<String> ar=new ArrayList<>();
+        String s="";
+        int max=0,dum=0;
+        for(int i=0;i<A.length();i++){
+            if(i%B!=0){
+               if(A.charAt(i)=='a'){
+                   dum++;
+               }
+                if(dum>max){
+                   max=dum;
+               }   
+              
+            }
+            else{
+                dum=0;
+                if(A.charAt(i)=='a'){
+                    dum++;
+                }
+                if(dum>max){
+                   max=dum;
+               }  
+            }
+        }
+
+        return max;
+    }
+}
