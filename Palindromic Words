@@ -1,0 +1,17 @@
+public class Solution {
+    public int solve(String A) {
+        ArrayList<String> ar=new ArrayList<>(Arrays.asList(A.split(" ")));
+        String dum="";
+        int count=0;
+        for(String s:ar){
+            dum="";
+            for(int i=s.length()-1;i>=0;i--){
+                dum+=s.charAt(i);
+            }
+            if(dum.equals(s)){
+                count++;
+            }
+        }
+        return count;
+    }
+}
