@@ -1,0 +1,24 @@
+public class Solution {
+    public String solve(String A, String B) {
+        int b=0;
+        int c=0;
+        ArrayList<String> A1=new ArrayList<>();
+        ArrayList<String> B1=new ArrayList<>();
+        for(int i=0;i<A.length();i++){
+            if(A.charAt(i)==B.charAt(i)){
+                b++;
+            }
+            else{
+                A1.add(String.valueOf(A.charAt(i)));
+                B1.add(String.valueOf(B.charAt(i)));
+            }
+        }
+        for(String j:A1){
+            if(B1.contains(j)){
+                c++;
+                B1.remove(j);
+            }
+        }
+        return String.valueOf(b)+"A"+String.valueOf(c)+"B";
+    }
+}
