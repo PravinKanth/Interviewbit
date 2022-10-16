@@ -1,0 +1,13 @@
+class Solution:
+    # @param A : string
+    # @return a strings
+    def solve(self, A):
+        a=[]
+        ans="";
+        for i in A:
+            if i not in a:
+                a.append(i)
+        for j in a:
+            ans+=j+str(A.count(j))
+        return ans    
+                    
