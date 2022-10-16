@@ -1,0 +1,30 @@
+public class Solution {
+    public String solve(String A, int B) {
+        A=A+"5";
+        String g="";
+        int c=-1;
+        int count=1;
+        while(true){
+            c++;
+            if(c==A.length()-1){break;}
+            if(A.charAt(c)==A.charAt(c+1)){
+                count++;
+                continue;
+            }
+            else{
+                if(count==B){
+                    count=1;
+                    continue;
+                }
+                else {
+                    for (int i = 0; i < count; i++) {
+                        g += A.charAt(c);
+                    }
+                }
+                count=1;
+            }
+
+        }
+    return g;
+    }
+}
