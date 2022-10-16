@@ -1,0 +1,20 @@
+public class Solution {
+    public String solve(String A) {
+        ArrayList<String> arr=new ArrayList<>();
+        String s="";
+        A=A+" ";
+        for(int i=0;i<A.length();i++){
+            if(A.charAt(i)!=' '){
+                s+=A.charAt(i);
+                if(A.charAt(i+1)==' '){
+                    arr.add(0,s);
+                    s="";
+                } 
+            }
+        }
+        if(arr.size()==0){
+            return A;
+        }
+        return String.join(" ",arr).trim();
+    }
+}
