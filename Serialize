@@ -1,0 +1,9 @@
+public class Solution {
+    public String serialize(ArrayList<String> A) {
+        String ans="";
+        for(String a:A){
+            ans+=a+""+a.length()+"~";
+        }
+        return ans;
+    }
+}
