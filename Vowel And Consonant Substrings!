@@ -1,0 +1,14 @@
+public class Solution {
+    public int solve(String A) {
+        int vowels=0,consonants=0;
+        for(int i=0;i<A.length();i++) {     
+            if(A.charAt(i)=='a' || A.charAt(i)=='e' || A.charAt(i)=='i' || A.charAt(i)=='o' || A.charAt(i)=='u') {    
+                vowels++;    
+            }      
+            else {         
+                consonants++;    
+            }    
+        } 
+        return (vowels*consonants)%1000000007;   
+    }
+}
