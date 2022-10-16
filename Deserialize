@@ -1,0 +1,7 @@
+public class Solution {
+    public ArrayList<String> deserialize(String A) {
+        ArrayList<String> a=new ArrayList<>(Arrays.asList(A.split("[0-9]+~")));
+        
+        return a;
+    }
+}
