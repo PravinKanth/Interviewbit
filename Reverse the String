@@ -12,9 +12,6 @@ public class Solution {
                 } 
             }
         }
-        if(arr.size()==0){
-            return A;
-        }
-        return String.join(" ",arr).trim();
+        return String.join(" ",arr);
     }
 }
