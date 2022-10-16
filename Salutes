@@ -1,0 +1,14 @@
+public class Solution {
+    public Long countSalutes(String A) {
+        long a=0,b=0,total=0;
+        for(int i=0;i<A.length();i++){
+            if(A.charAt(i)=='>'){
+                a++;
+            }
+            else{
+                total+=a;
+            }
+        }
+       return total;
+    }
+}
