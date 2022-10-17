@@ -1,0 +1,12 @@
+import java.util.regex.*;
+public class Solution {
+    // DO NOT MODIFY THE LIST. IT IS READ ONLY
+    public int strStr(final String A, final String B) {
+        Pattern a=Pattern.compile(B);
+        Matcher b=a.matcher(A);
+        if(b.find()){
+            return b.start();
+        }
+return -1;
+    }
+}
