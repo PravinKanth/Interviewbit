@@ -1,0 +1,22 @@
+public class Solution {
+    public ArrayList<String> fizzBuzz(int A) {
+        ArrayList<String> arr=new ArrayList<>();
+        String a="";
+        for(int i=1;i<=A;i++){
+            if(i%3==0 && i%5==0){
+                a+=" FizzBuzz";
+            }
+            else if(i%3==0){
+                a+=" Fizz";
+            }
+            else if(i%5==0){
+                a+=" Buzz";
+            }
+            else{
+                a=a+" "+String.valueOf(i);
+            }
+        }
+        arr.add(a.trim());
+        return arr;
+    }
+}
