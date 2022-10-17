@@ -1,11 +1,7 @@
 public class Solution {
     public int solve(int A, int B, int C, int D) {
-        if(A==B){
-            if(C==D){
-                if(C>A || A>C){
-                    return 1;
-                }
-            }
+        if((A==B && C==D) && (C>A || A>C)){
+            return 1;
         }
         return 0;
     }
