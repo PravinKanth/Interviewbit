@@ -1,0 +1,19 @@
+import math
+class Solution:
+    # @param A : tuple of integers
+    # @return an integer
+    def majorityElement(self, A):
+        a=math.floor(len(A)/2)
+        b=[]
+        A=sorted(A)
+        A.append(" ")
+        count=1
+        for i in range(len(A)-1):
+            if(A[i]==A[i+1]):
+                count+=1
+                if(count>a):
+                    return A[i]
+            else:
+                count=1 
+                if(count>a):
+                    return A[i]
