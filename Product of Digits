@@ -1,0 +1,10 @@
+public class Solution {
+    public int solve(int A) {
+        String a=String.valueOf(A);
+        int m=1;
+        for(int i=0;i<a.length();i++){
+          m*=Integer.valueOf(String.valueOf(a.charAt(i)));  
+        }
+        return m;
+    }
+}
