@@ -1,0 +1,14 @@
+public class Solution {
+    public int solve(int A) {
+        int a=0;
+        String b=String.valueOf(A);
+        for(int i=0;i<b.length();i++){
+            a+=Math.pow((Integer.valueOf(String.valueOf(b.charAt(i)))),b.length());
+        }
+        
+        if(a==A){
+            return 1;
+        }
+        return 0;
+    }
+}
